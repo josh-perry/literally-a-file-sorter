@@ -20,6 +20,11 @@ namespace FileSorter
         public string Type;
 
         /// <summary>
+        /// Has this file been sorted yet?
+        /// </summary>
+        public bool Sorted = false;
+
+        /// <summary>
         /// Constructor. Takes the fullpath to a file.
         /// </summary>
         /// <param name="fullpath"></param>

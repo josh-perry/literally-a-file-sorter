@@ -24,7 +24,7 @@ namespace FileSorter
         /// <summary>
         /// A detector to determine how the files should be sorted
         /// </summary>
-        public IFileTypeDetector FileTypeDetector;
+        public List<IFileTypeDetector> FileTypeDetectors;
 
         /// <summary>
         /// Update the list of files.
@@ -42,13 +42,16 @@ namespace FileSorter
         /// </summary>
         public void Sort()
         {
-            foreach (var file in Files)
+            foreach (var detector in FileTypeDetectors)
             {
-                // Detect filetype
-                file.Type = FileTypeDetector.Detect(file);
+                foreach (var file in Files.Where(x => !x.Sorted))
+                {
+                    // Detect filetype
+                    file.Type = detector.Detect(file);
 
-                // Sort accordingly
-                Sort(file);
+                    // Sort accordingly
+                    Sort(file);
+                }
             }
         }
 
@@ -67,6 +70,7 @@ namespace FileSorter
             }
 
             System.IO.File.Move(file.FullPath, Path.Combine(newDirectory, file.Name));
+            file.Sorted = true;
         }
     }
 }
