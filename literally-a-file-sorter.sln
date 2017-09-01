@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "literally-a-file-sorter", "literally-a-file-sorter\literally-a-file-sorter.csproj", "{8BE981B8-C95F-475F-A96D-08D9BF0B947B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSorter", "FileSorter\FileSorter.csproj", "{4F599D7C-99A5-4EF3-87EE-DC58C320017A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8BE981B8-C95F-475F-A96D-08D9BF0B947B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BE981B8-C95F-475F-A96D-08D9BF0B947B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BE981B8-C95F-475F-A96D-08D9BF0B947B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F599D7C-99A5-4EF3-87EE-DC58C320017A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F599D7C-99A5-4EF3-87EE-DC58C320017A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F599D7C-99A5-4EF3-87EE-DC58C320017A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F599D7C-99A5-4EF3-87EE-DC58C320017A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
