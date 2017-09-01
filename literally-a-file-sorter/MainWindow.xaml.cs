@@ -13,13 +13,13 @@ namespace literally_a_file_sorter
         {
             InitializeComponent();
 
-            var x = new FileSorter.Sorter
+            var x = new Sorter
             {
                 FileTypeDetectors = new List<IFileTypeDetector>
                 {
                     new ImageFileTypeCategoriser(),
                     new AudioFileTypeCategoriser(),
-                    new FileExtensionDetector()
+                    new VideoFileTypeCategoriser()
                 },
                 RootDirectory = @"C:\Users\Josh\Downloads",
                 TargetDirectory = @"C:\Users\Josh\Downloads"
