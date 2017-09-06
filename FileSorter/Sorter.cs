@@ -79,7 +79,7 @@ namespace FileSorter
         private void Sort(File file)
         {
             var newDirectory = file.Type ?? "Unsorted";
-            newDirectory = Path.Combine(RootDirectory, newDirectory);
+            newDirectory = Path.Combine(TargetDirectory, newDirectory);
 
             var newPath = Path.Combine(newDirectory, file.Name);
 
