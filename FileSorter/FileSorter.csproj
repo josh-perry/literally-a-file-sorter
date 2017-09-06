@@ -44,6 +44,7 @@
     <Compile Include="FileTypeDetectors\FileExtensionDetector.cs" />
     <Compile Include="FileTypeDetectors\AudioFileTypeCategoriser.cs" />
     <Compile Include="FileTypeDetectors\ImageFileTypeCategoriser.cs" />
+    <Compile Include="FileTypeDetectors\VideoFileTypeCategoriser.cs" />
     <Compile Include="IFileTypeDetector.cs" />
     <Compile Include="Sorter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

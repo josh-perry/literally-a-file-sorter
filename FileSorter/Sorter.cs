@@ -33,8 +33,25 @@ namespace FileSorter
         {
             foreach (var file in Directory.GetFiles(RootDirectory))
             {
-                Files.Add(new File(file));
+                var f = new File(file);
+
+                if (ShouldIgnore(f))
+                {
+                    continue;
+                }
+
+                Files.Add(f);
             }
+        }
+
+        /// <summary>
+        /// Should this file be ignored?
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
+        public bool ShouldIgnore(File file)
+        {
+            return Path.GetExtension(file.FullPath) == ".tmp";
         }
 
         /// <summary>
