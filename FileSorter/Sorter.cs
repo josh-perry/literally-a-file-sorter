@@ -81,12 +81,19 @@ namespace FileSorter
             var newDirectory = file.Type ?? "Unsorted";
             newDirectory = Path.Combine(RootDirectory, newDirectory);
 
+            var newPath = Path.Combine(newDirectory, file.Name);
+
             if (!Directory.Exists(newDirectory))
             {
                 Directory.CreateDirectory(newDirectory);
             }
 
-            System.IO.File.Move(file.FullPath, Path.Combine(newDirectory, file.Name));
+            if (System.IO.File.Exists(newPath))
+            {
+                return;
+            }
+
+            System.IO.File.Move(file.FullPath, newPath);
             file.Sorted = true;
         }
     }
