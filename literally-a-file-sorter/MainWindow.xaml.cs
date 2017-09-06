@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Windows;
 using FileSorter;
 using FileSorter.FileTypeDetectors;
 
@@ -12,21 +13,21 @@ namespace literally_a_file_sorter
         public MainWindow()
         {
             InitializeComponent();
+        }
 
-            var x = new Sorter
-            {
-                FileTypeDetectors = new List<IFileTypeDetector>
-                {
-                    new ImageFileTypeCategoriser(),
-                    new AudioFileTypeCategoriser(),
-                    new VideoFileTypeCategoriser()
-                },
-                RootDirectory = @"C:\Users\Josh\Downloads",
-                TargetDirectory = @"C:\Users\Josh\Downloads"
-            };
-            
-            x.GetFileListing();
-            x.Sort();
+        private void ButtonBrowseSource_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void ButtonBrowseOutput_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void SortButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
